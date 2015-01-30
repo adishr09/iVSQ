@@ -2,6 +2,29 @@
 <head>
 <link rel="stylesheet" href="css/body.css" type="text/css">
 </head>
+<?php
+	session_start();
+	if(isset($_POST['user']) && isset($_POST['pass']))
+	{
+		mysql_connect('mysql1.freehosting.com', 'bvpieeec_lol', 'hdb32wb98') or die("<br/>error");
+		mysql_select_db('bvpieeec_delhibvce') or die("<br>DB_error");
+		$u=$_POST['user'];
+		$p=$_POST['pass'];
+		echo $u;
+		echo $p."<br><br>";
+
+		$q="SELECT * FROM `vsq_15` WHERE pass='".$p."'";
+		
+		$q_run=mysql_query($q) or die("<br/>error_run");
+		$q_row=mysql_fetch_assoc($q_run);
+		echo '<br>'.$q_row['uname']; 
+		$uname=$q_row['uname'];
+		if($uname==$u ){$_SESSION['uname']=$u; 
+		header( 'Location: index_new.php' ) ;
+		}
+		else if ($end != 0 ){header( 'Location: end.php' ) ;}
+		}
+?>
 <body style="margin:0;">
 <div class="main_div">
 <div class="content">
@@ -28,7 +51,7 @@
 	
 	</form>
 </div>
-<div class="content1" style="display:inline-block; margin:0; background-color:rgba(0,0,0,0.4); border-top:solid 5px white; padding-bottom:20px;"><p><center>
+<div class="content1" style="display:inline-block; margin:0; background-color:rgba(50, 0, 71, 0.65); border-top:solid 5px white; padding-bottom:20px;"><p><center>
 <img class="lol" src="img/IEEE.png" style="width:18%;">
 <img class="lol" src="img/BVPIEEE.png" style="width:18%;">
 <img class="lol" src="img/bvp.png" style="width:18%;">
