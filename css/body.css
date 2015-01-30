@@ -128,20 +128,26 @@ padding:10%;
 }
 
 #login{
-height:auto;
+padding:2%;
+margin:8%;
 float:left;
-position:inherit;
 width:29%;
-margin:10%;
-box-shadow:7px 7px 5px #888888;
-border:groove;
+border:5px white solid;
+border-radius: 20px;
+background:rgba(0,0,0,0.4);
+height:auto;
+display:inline;
 }
 
 .content{
-padding:10%;
+padding:2%;
+margin:8%;
 float:left;
 width:29%;
-height:100%;
+border:5px white solid;
+border-radius: 20px;
+background:rgba(0,0,0,0.4);
+height:auto;
 display:inline;
 }
 
@@ -153,8 +159,9 @@ margin:0;
 width:90%;
 height:5%;
 padding:5%;
-font-weight:900;	
-background-color:rgba(55,54,54,0.4);
+font-weight:900;
+font-size:2em;	
+
 }
 
 .box{
@@ -180,7 +187,6 @@ margin:5% 25%;
 width:90%;
 position:inherit;
 display:inline-block;
-background-color:rgba(55,54,54,0.4);
 margin:0;
 padding:2% 5%;
 }
